@@ -39,30 +39,30 @@ kubectl apply -f mongo-secret.yaml
 kubectl apply -f webapp.yaml
 ```
 
-This will create a MongoDB deployment and a deployment for the k8s-demo-app container.
+This will create a MongoDB deployment and a deployment for the webapp container.
 
 ## Accessing the Application
 
 To access the application, you will need to expose the service as a NodePort. To do this, run the following command:
 
 ```
-kubectl expose deployment k8s-demo-app --type=NodePort --port=8080
+kubectl expose deployment webapp-deployment --type=NodePort --port=8080
 ```
 
-This will create a NodePort service for the k8s-demo-app container. You can access the application by navigating to `http://<node-ip>:<node-port>` in your web browser.
+This will create a NodePort service for the webapp container. You can access the application by navigating to `http://<node-ip>:<node-port>` in your web browser.
 
 ## Cleaning Up
 
 To delete the MongoDB and k8s-demo-app deployments, run the following command:
 
 ```
-kubectl delete deployment mongo k8s-demo-app
+kubectl delete deployment mongo-deployment webapp-deployment
 ```
 
 To delete the NodePort service, run the following command:
 
 ```
-kubectl delete service k8s-demo-app
+kubectl delete service mongo-service webapp-service
 ```
 
 ## Conclusion
