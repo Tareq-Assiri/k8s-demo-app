@@ -34,7 +34,9 @@ To deploy the application to your Kubernetes cluster, navigate to the `k8s` dire
 
 ```
 kubectl apply -f mongo-deployment.yaml
-kubectl apply -f app-deployment.yaml
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f mongo-secret.yaml
+kubectl apply -f webapp.yaml
 ```
 
 This will create a MongoDB deployment and a deployment for the k8s-demo-app container.
