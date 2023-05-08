@@ -1,0 +1,60 @@
+
+# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  webapp-deployment
+  namespace: default
+  labels:
+    app:  webapp
+spec:
+  selector:
+    matchLabels:
+      app: webapp
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  webapp
+    spec:
+      containers:
+      - name:  webapp
+        image:  nanajanashia/k8s-demo-app:v1.0
+        ports:
+        - containerPort:  3000
+          name:  webapp
+        env:
+        - name: USER_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: mongo-user
+        - name: USER_PWD
+          valueFrom:
+            secretKeyRef:
+              name: mongo-secret
+              key: mongo-password
+        - name: DB_URL
+          valueFrom:
+            configMapKeyRef:
+              name: mongo-config
+              key: mongo-url
+
+---
+# https://kubernetes.io/docs/concepts/services-networking/service/
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-service
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    app: webapp
+  ports:
+  - name: webapp
+    protocol: TCP
+    port: 3000
+    targetPort: 3000
+    nodePort: 30100
+---
