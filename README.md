@@ -17,7 +17,7 @@ You will also need to have an active Kubernetes cluster to deploy the applicatio
 To get started, clone this repository to your local machine using the following command:
 
 ```
-git clone https://github.com/nanajanashia/k8s-demo-app.git
+git clone https://github.com/Tareq-Assiri/k8s-demo-app.git
 ```
 
 Next, navigate to the root directory of the repository and run the following command to build the Docker container:
