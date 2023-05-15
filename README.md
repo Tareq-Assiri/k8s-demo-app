@@ -48,7 +48,8 @@ Accessing the Application
 
 To access the application, you will need to access the NodePort service for the k8s-demo-app container by navigating to `http://<node-ip>:<node-port>` in your web browser.
 
-![HomePage](./Home Page.png)
+![HomePage](https://raw.githubusercontent.com/Tareq-Assiri/k8s-demo-app/master/Home%20Page.png)
+
 Cleaning Up
 -----------
 
