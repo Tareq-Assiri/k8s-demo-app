@@ -30,12 +30,10 @@ pull the k8s-demo-app image to your local machine using the following command:
 docker pull nanajanashia/k8s-demo-app:v1.0
 ```
 
-Next, navigate to the root directory of the repository and deploy the it directly to your Kubernetes cluster.
-
 Deploying to Kubernetes
 -----------------------
 
-To deploy the application to your Kubernetes cluster, navigate to the `k8s` directory and run the following command:
+To deploy the application to your Kubernetes cluster, navigate to the `k8s-demo-app` directory and run the following command:
 ```
 kubectl apply -f mongo-secret.yaml
 kubectl apply -f mongo.yaml
