@@ -3,6 +3,10 @@ k8s-demo-app
 
 This repository contains instructions and configuration files for deploying a Kubernetes cluster using MongoDB and a Docker container.
 
+The Original Tutorial
+-------------
+[Kubernetes Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=s_o8dwzRlu4&ab_channel=TechWorldwithNana)
+
 Prerequisites
 -------------
 
@@ -21,9 +25,9 @@ To get started,clone this repository to your local machine using the following c
 ```
 git clone https://github.com/Tareq-Assiri/k8s-demo-app
 ```
-pull this image to your local machine using the following command:
+pull the k8s-demo-app image to your local machine using the following command:
 ```
-docker pull nanajanashia/k8s-demo-app
+docker pull nanajanashia/k8s-demo-app:v1.0
 ```
 
 Next, navigate to the root directory of the repository and deploy the it directly to your Kubernetes cluster.
