@@ -12,9 +12,9 @@ Prerequisites
 
 Before deploying the Kubernetes cluster, you will need to have the following software installed:
 
-- Kubernetes
-- Docker
-- kubectl
+- Kubernetes.
+- Docker.
+- kubectl.
 
 You will also need to have an active Kubernetes cluster to deploy the application to.
 
