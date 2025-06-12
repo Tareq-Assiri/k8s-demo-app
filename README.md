@@ -67,3 +67,6 @@ Conclusion
 ----------
 this is just an example on how to deploy a Kubernetes cluster using a docker image
 
+
+
+
